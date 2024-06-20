@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawyer</title>
+    <link rel="stylesheet" href="lawyer.html">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="mobile-frame">
+        <div class="screen">
+            <div class="header">
+                <img src="Photos/image-removebg-preview (1).png" alt="Logo" class="logo">
+                <div class="dropdown">
+                    <button class="dropbtn">☰</button>
+                    <div class="dropdown-content">
+                        <a href="client-home.html">Reported</a>
+                        <a href="client-home.html">Documentation</a>
+                        <a href="support.html">Chat Hub</a>
+                        </div>
+                        </div>
+                        </div>
+                        
+                      <center> <p class="p">Lawyer</p></center> 
+            <div class="button-group">
+                <button class="nav-button"> <img src="Photos/icons8-client-50.png" alt="" width="30px;"> </button>
+                <button class="nav-button"><img src="Photos/icons8-claim-64 (1).png" alt="" width="30px;"></button>
+                <button class="nav-button"> <img src="Photos/icons8-chat-50.png" alt="" width="30px;"></button>
+            </div>
+
+            <div class="content-container">
+    
+                <div class="folder">
+                    <div class="folder-header">Personal Details</div>
+                    <div class="folder-content">
+                        <p><strong>Name:</strong> John Doe</p>
+                        <p><strong>Email:</strong> john.doe@example.com</p>
+                        <p><strong>Phone:</strong> (123) 456-7890</p>
+                    </div>
+                </div>
+                <div class="folder">
+                    <div class="folder-header">Address</div>
+                    <div class="folder-content">
+                        <p><strong>Street:</strong> 123 Main St</p>
+                        <p><strong>City:</strong> New York</p>
+                        <p><strong>State:</strong> NY</p>
+                        <p><strong>Zip Code:</strong> 10001</p>
+                    </div>
+                </div>
+                <div class="folder">
+                    <div class="folder-header">Billing</div>
+                    <div class="folder-content">
+                        <p><strong>Last Payment:</strong> December 25, 2021</p>
+                        <p><strong>Total Payments:</strong> 10</p>
+                        <p><strong>Payment Method:</strong> Visa **** 1234</p>
+                    </div>
+                </div>
+                <div class="folder"></div>
+            </div>
+        </div>  
+        </div>
+    </div>
+</body>
+</html>
+<style>
+
+.p{
+    margin-top:-30px;
+    color:#ea601b;
+    font-size:20px;
+    letter-spacing:2px;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #f0f4f8; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.mobile-frame {
+    width: 375px;
+    height: 667px;
+    border: 2px solid #ccc;
+    border-radius: 36px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.screen {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    background-image: url('Photos/harley-davidson-7zBJa1-S224-unsplash.jpg');
+    background-size:300%;
+    background-position: center;
+    overflow: auto; /* Makes the screen scrollable */
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+  
+    border-radius: 10px;
+}
+
+.logo {
+    width: 200px; /* Adjust the logo size */
+    height: uto;
+    margin-left: 60px;
+   
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #272727;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.content-container {
+    flex: 1;
+    padding: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.folder {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.folder:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.folder-header {
+  
+   
+    padding: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #800f0f;
+}
+
+.folder-content {
+    padding: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.folder-content p {
+    margin: 0 0 10px;
+}
+
+/* Styles for button group */
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.nav-button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #ddd;
+}
+
+</style>

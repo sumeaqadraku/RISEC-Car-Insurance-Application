@@ -1,0 +1,144 @@
+
+body {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    background-color: #f7f7f7; /* Lighter background color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.mobile-frame {
+    width: 375px;
+    height: 667px;
+    border: 1px solid #d8d8d8; /* Light border */
+    border-radius: 20px; /* Smaller border radius */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #fafafa, #f0f0f0); /* Subtle gradient background */
+}
+
+.mobile-frame::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    background: #adabab;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 30px);
+}
+
+.mobile-frame::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 30px;
+    left: calc(50% - 17.5px);
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url('Photos/leonard-gorges-ISRGL1eSwBI-unsplash.jpg');
+    background-position: center; 
+    position: relative;
+}
+/* Add this CSS to your styles-profile.css file */
+a {
+    color: inherit; /* Use the same color as the parent element */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    color: inherit; /* Use the same color as the parent element on hover */
+}
+
+.header {
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    margin-top:25px;
+    width: 220px; /* Smaller logo */
+    height: auto;
+    font-size: 2em; /* Larger font size */
+    color: #333; /* Darker color */
+}
+
+.profile-selection-screen {
+    padding: 20px;
+}
+
+.profiles {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.profile-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%; /* Circular avatar */
+    margin-right: 15px;
+}
+
+.profile-info {
+    flex-grow: 1;
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font for logo */
+}
+
+.profile-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333; /* Darker color */
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font for logo */
+    
+}
+
+.profile-info p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #666; /* Slightly darker color */
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font for logo */
+}
+
+.add-button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #007BFF;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.add-button:hover {
+    background-color: #f0f0f0;
+}

@@ -1,0 +1,211 @@
+body {
+
+  
+    background-position: center; /* Center the background image */
+    /* Add any additional styling here */
+font-family: Arial, sans-serif;
+background-color: #D2CFD0;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+.logo {
+
+width: 250px; /* Adjust the width as needed */
+height: 100px; /* Automatically adjust the height to maintain aspect ratio */
+}
+
+
+.mobile-frame {
+width: 375px;  /* typical width of a mobile device */
+height: 667px; /* typical height of a mobile device */
+border: 2px solid #9b9898;
+border-radius: 36px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+position: relative;
+overflow: hidden;
+}
+
+.mobile-frame::before {
+content: '';
+display: block;
+width: 60px;
+height: 5px;
+background: #adabab;
+border-radius: 10px;
+position: absolute;
+top: 10px;
+left: calc(50% - 30px);
+}
+
+.mobile-frame::after {
+content: '';
+display: block;
+width: 35px;
+height: 35px;
+background: #e0e0e0;
+border-radius: 50%;
+position: absolute;
+bottom: 30px;
+left: calc(50% - 17.5px);
+}
+
+.screen {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100%;
+padding: 50px;
+}
+
+.login-screen {
+text-align: center;
+
+}
+
+
+
+.input-field {
+width: 70%;
+padding: 10px;
+margin: 10px 0;
+border: 1px solid #ccc;
+border-radius: 8px;
+}
+
+.btn {
+width: 40%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+color: #000000;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+margin: 10px 0;
+}
+
+.btn:hover {
+background-color: #ffffff;
+}
+
+.forgot-password {
+display: block;
+margin: 10px 0;
+color: #cac0c0;
+text-decoration: none;
+font-size:13px;
+font-family: 'Montserrat', sans-serif;
+
+}
+
+.forgot-password:hover {
+font-family: 'Montserrat', sans-serif;
+text-decoration: underline;
+}
+
+.footer-nav {
+display: flex;
+justify-content: space-around;
+margin-top: 20px;
+}
+
+.footer-nav a {
+color: #94878B;
+text-decoration: none;
+}
+
+.footer-nav a:hover {
+text-decoration: underline;
+}
+
+/* Profile Selection*/ 
+
+/* General body styles */
+body {
+font-family: Arial, sans-serif;
+background-color: #e0e6ed; /* Light gray background */
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+.mobile-frame {
+    width: 375px;
+    height: 667px;
+    border: 2px solid #9b9898;
+    border-radius: 36px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 36px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.screen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Photos/paul-cisneros-vzw6mtO7mYw-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(1px); /* Adjust blur intensity as needed */
+    z-index: -1; /* Place the overlay behind other content */
+}
+
+.header {
+    display: flex;
+    justify-content: center; /* Center the logo horizontally */
+    align-items: center; /* Center the logo vertically */
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+}
+.back-button, .menu-button {
+background-color: #fff;
+border: none;
+font-size: 1.5em;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover, .menu-button:hover {
+background-color: #f0f0f0;
+
+}
+
+.logo {
+font-size: 1.5em;
+color: #333;
+font-weight: bold;
+}
+

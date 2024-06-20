@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RISEC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="mobile-frame">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+        <div class="screen login-screen">
+            <img src="Photos/image-removebg-preview (1).png" alt="Logo" class="logo">
+            <br>
+            <form onsubmit="handleLogin(event)">
+                <input type="text" placeholder="Email" class="input-field">
+                <input type="password" placeholder="Password" class="input-field">
+                </br>
+                <button type="submit" class="btn">Log in</button>
+                <a href="forgot-password.html" class="forgot-password">Forgot your password?</a> <!-- Link to forgot-password.html -->
+            </form>
+        </div>
+    </div>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            window.location.href = "profile-selection.html"; // Replace with your desired URL
+        }
+    </script>
+</body>
+</html>
+

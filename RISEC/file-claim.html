@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim</title>
+    <style>
+        /* General body styles */
+        body {
+            font-family: 'Montserrat', sans-serif; 
+            background-color: #f0f4f8; /* Light gray background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .mobile-frame {
+            width: 375px;
+            height: 667px;
+            border: 2px solid #ccc;
+            border-radius: 36px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .screen {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            overflow: auto; /* Makes the screen scrollable */
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            background-color: #efeeee;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            
+        }
+
+        .logo {
+            width: 180px; /* Adjust the logo size */
+            height: 120px;
+            margin-left: 60px;
+        }
+
+        .back-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            margin-right: auto;
+        }
+
+        .content-container {
+            padding: 10px;
+            font-family: 'Montserrat', sans-serif;
+            
+        }
+
+        .folder {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 10px;
+            margin-bottom: 20px;
+            
+        }
+
+        .folder-header {
+            background-color: #f0f0f0;
+            padding: 10px;
+            font-size: 16px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .folder-content {
+            padding: 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .folder-content p {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0 0 10px;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .action-button {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 45%;
+        }
+
+        .action-button.submit {
+            background-color: #1e0404;
+            color: #fff;
+            border: none;
+        }
+
+        .action-button.cancel {
+            background-color: #f0f0f0;
+        }
+
+        .action-button:hover {
+            background-color: #ddd;
+        }
+
+        .action-button.submit:hover {
+            background-color: #120202;
+        }
+
+        .carousel {
+            height: 200px;
+            background-color: #d8d8d8;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            background-image: url('Photos/will-creswick-YH1KID3mTpY-unsplash.jpg');
+            background-size: cover;
+            background-position: center;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }
+
+        .carousel-indicators span {
+            height: 8px;
+            width: 8px;
+            background-color: #000;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 3px;
+        }
+
+        .carousel-indicators span.active {
+            background-color: #666;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        label {
+            margin: 10px 0 5px;
+        }
+
+        input, select, textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fffdfd
+        }
+
+        input:focus, select:focus, textarea:focus {
+    border: 1px solid #000; /* Change border color to black when focused */
+}
+
+    </style>
+</head>
+<body>
+    <div class="mobile-frame">
+        <div class="screen">
+            <div class="header">
+                <button class="back-button">&larr;</button>
+            </div>
+            <div class="content-container">
+                <div class="carousel">
+                    <!-- Carousel content here -->
+                    <div class="carousel-indicators">
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="folder">
+                    <div class="folder-content">
+                        <p>Provide here a comprehensive description of the accident, covering various aspects such as the sequence of events, conditions, injuries, and any other relevant details to facilitate the claim processing.</p>
+                    </div>
+                </div>
+                <form id="claim-form">
+                    <h3>User Information</h3>
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" required>
+
+                    <label for="contact-number">Contact Number:</label>
+                    <input type="tel" id="contact-number" name="contact-number" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+
+                    <h3>Vehicle Information</h3>
+                    <label for="vehicle-make">Vehicle Make:</label>
+                    <input type="text" id="vehicle-make" name="vehicle-make" required>
+
+                    <label for="vehicle-model">Vehicle Model:</label>
+                    <input type="text" id="vehicle-model" name="vehicle-model" required>
+
+                    <label for="vehicle-year">Vehicle Year:</label>
+                    <input type="number" id="vehicle-year" name="vehicle-year" required>
+
+                    <label for="license-plate">License Plate Number:</label>
+                    <input type="text" id="license-plate" name="license-plate" required>
+
+                    <h3>Accident Details</h3>
+                    <label for="accident-date">Date of Accident:</label>
+                    <input type="date" id="accident-date" name="accident-date" required>
+
+                    <label for="accident-time">Time of Accident:</label>
+                    <input type="time" id="accident-time" name="accident-time" required>
+
+                    <label for="accident-location">Location of Accident:</label>
+                    <input type="text" id="accident-location" name="accident-location" required>
+
+                    <label for="accident-description">Description of Accident:</label>
+                    <textarea id="accident-description" name="accident-description" rows="4" required></textarea>
+                    <div class="action-buttons">
+                        <button class="action-button cancel">Cancel Claim</button>
+                        <button class="action-button submit" type="submit">Submit Claim</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('claim-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            // You can perform form submission handling here, e.g., sending data to the server
+            // For demonstration purposes, let's just show an alert
+            alert('Form submitted successfully!');
+        });
+    </script>
+</body>
+</html>
